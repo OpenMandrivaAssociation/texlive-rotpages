@@ -55,6 +55,7 @@ the solutions rotated.
 %doc %{_texmfdistdir}/doc/latex/rotpages/Examples/rotpages-singlecolumn-ex.pdf
 %doc %{_texmfdistdir}/doc/latex/rotpages/Examples/rotpages-singlecolumn-ex.tex
 %doc %{_texmfdistdir}/doc/latex/rotpages/README
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -65,3 +66,5 @@ the solutions rotated.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
