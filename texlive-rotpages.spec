@@ -6,7 +6,7 @@
 # catalog-version 3.0
 Name:		texlive-rotpages
 Version:	3.0
-Release:	8
+Release:	9
 Summary:	Typeset sets of pages upside-down and backwards
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/rotpages
