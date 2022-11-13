@@ -1,18 +1,12 @@
-# revision 18740
-# category Package
-# catalog-ctan /macros/latex/contrib/rotpages
-# catalog-date 2007-01-14 10:43:12 +0100
-# catalog-license lppl
-# catalog-version 3.0
 Name:		texlive-rotpages
-Version:	3.0
-Release:	11
+Version:	18740
+Release:	1
 Summary:	Typeset sets of pages upside-down and backwards
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/rotpages
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/rotpages.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/rotpages.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/rotpages.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/rotpages.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -27,12 +21,12 @@ using the package, you can print the exercise text normally and
 the solutions rotated.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -49,24 +43,10 @@ the solutions rotated.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.0-2
-+ Revision: 755726
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 3.0-1
-+ Revision: 719464
-- texlive-rotpages
-- texlive-rotpages
-- texlive-rotpages
-- texlive-rotpages
-
