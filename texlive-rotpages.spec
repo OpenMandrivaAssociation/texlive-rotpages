@@ -1,6 +1,6 @@
 Name:		texlive-rotpages
 Version:	18740
-Release:	1
+Release:	2
 Summary:	Typeset sets of pages upside-down and backwards
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/rotpages
